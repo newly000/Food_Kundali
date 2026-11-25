@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%232c7a4b'/%3E%3Ccircle cx='24' cy='28' r='12' fill='%23e3a62a'/%3E%3Cpath d='M25 17c-1-6 3-10 10-10 1 6-3 10-10 10z' fill='%23fff'/%3E%3C/svg%3E">
+<title>Food Kundali</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="w">
+<header class="hd"><svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#2c7a4b"/><circle cx="24" cy="28" r="12" fill="#e3a62a"/><path d="M25 17c-1-6 3-10 10-10 1 6-3 10-10 10z" fill="#fff"/><path d="M24 17v-3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg><div class="ht"><div class="brandtop"><h1><button type="button" class="brandhome" id="brandHome" aria-label="Food Kundali home" title="Food Kundali home">Food <span class="bk-mark"><span class="bk-grad">Kundali</span><svg class="bk-swash" viewBox="0 0 100 9" preserveAspectRatio="none" aria-hidden="true"><path class="bk-s1" d="M2 6.2C25 2.4 75 2 98 5"/><path class="bk-s2" d="M4 8.1C30 4.9 70 4.6 96 7.2"/></svg></span></button></h1></div><div class="brandtag" id="brandTag">Apna khana, apni kundali</div></div><div class="mn"><button type="button" class="mbtn" id="mbtn" aria-label="Menu" aria-haspopup="true" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/></svg></button><div class="mp" id="mp" role="menu">
+<div class="mset"><div class="mlab">🌐 <span data-m="language"></span></div><div class="lg" role="group" aria-label="Language"><button type="button" data-l="en" aria-label="English">English</button><button type="button" data-l="hi" aria-label="Hinglish">Hinglish</button></div></div>
+<div class="mset"><div class="mlab">🌓 <span data-m="theme"></span></div><div class="tg" role="group" aria-label="Theme"><button type="button" data-th="light" aria-pressed="false">☀️ Light</button><button type="button" data-th="dark" aria-pressed="false">🌙 Dark</button></div></div>
+<div class="msep" role="separator"></div>
+<button class="mi" role="menuitem" data-a="help">❓ <span data-m="help"></span></button><button class="mi" role="menuitem" data-a="about">ℹ️ <span data-m="about"></span></button><button class="mi" role="menuitem" data-a="soon">🚀 <span data-m="soon"></span></button><div class="msep" role="separator"></div><button class="mi mreset" role="menuitem" data-a="reset">🔄 <span data-m="reset"></span></button></div></div></header>
+<p class="sub" id="sub"></p>
+<div class="sbox"><input id="q" type="text" inputmode="search" enterkeyhint="search" role="combobox" aria-expanded="false" aria-controls="sug" aria-autocomplete="list" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. banana, spinach, egg, almond, paneer" aria-label="Food search"><button type="button" class="sx" id="qx" aria-label="Clear" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" fill="none"/></svg></button><button type="button" class="sg" id="qg" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button><ul class="sug" id="sug" role="listbox" aria-label="Suggestions"></ul></div>
+<div class="tryrow" id="tryrow" role="group" aria-label="Try karo"><span class="trylabel" data-hi="tryLabel">Try karo:</span><button type="button" class="chip tchip" data-try="banana">🍌 Banana</button><button type="button" class="chip tchip" data-try="egg">🥚 Egg</button><button type="button" class="chip tchip" data-try="paneer">🥛 Paneer</button><button type="button" class="chip tchip" data-try="roti">🌾 Roti</button><button type="button" class="chip tchip" data-try="palak">🥬 Spinach</button></div><div class="pick"><details class="fold" id="fold"><summary class="fold-sum"><span class="fold-ic" aria-hidden="true">▦</span><span data-hi="foldLabel">Category se browse karo</span></summary><div class="fold-body"><div class="dd" data-for="cats" data-label="Categories"></div><div class="dd" data-for="chips" data-label="Food items"></div></div></details></div><div hidden><select id="cats"></select><select id="chips"></select></div><div class="qtiles" role="group" aria-label="Quick actions"><button type="button" class="qt" id="tileCalc"><span class="qt-e" aria-hidden="true">🍽️</span><span class="qt-t" data-hi="qt1t">Plate banao</span><span class="qt-s" data-hi="qt1s">Apne goal ke hisaab se daily plate</span></button><button type="button" class="qt" id="tileCompare"><span class="qt-e" aria-hidden="true">🆚</span><span class="qt-t" data-hi="qt2t">Do foods compare karo</span><span class="qt-s" data-hi="qt2s">Calories, protein — side by side</span></button><button type="button" class="qt" id="tileNutrients"><span class="qt-e" aria-hidden="true">🧪</span><span class="qt-t" data-hi="qt3t">Kis food me kya zyada hai</span><span class="qt-s" data-hi="qt3s">Iron, protein, fiber — poori list</span></button><button type="button" class="qt" id="tileProfile"><span class="qt-e" aria-hidden="true">👤</span><span class="qt-t" data-hi="qt4t">Meri profile</span><span class="qt-s" data-hi="qt4s">Naam, goal aur diet set karo</span></button></div><div class="welcome" id="intro" role="note"><button type="button" class="wc-close" id="introClose" aria-label="Dismiss welcome card">✕</button><p class="wc-t" data-hi="introT">Food Kundali mein swagat hai!</p><p class="wc-line" data-hi="introK">Kundali = kisi bhi food ki poori nutrition profile</p><p class="wc-steps" data-hi="introS">3 steps: 1) Food search karo → 2) Detail dekho → 3) Plate me jodo</p></div>
+<button type="button" id="nxReturn" class="nxreturn" hidden><span aria-hidden="true">←</span><span id="nxReturnText"></span></button>
+<button type="button" id="cpReturn" class="nxreturn" hidden><span aria-hidden="true">←</span><span id="cpReturnText"></span></button>
+<button type="button" id="personalReturn" class="nxreturn" hidden><span aria-hidden="true">←</span><span id="personalReturnText"></span></button>
+<div id="out"></div>
+<section id="profilePage" hidden aria-label="My profile"><div id="profileBody"></div></section>
+<section id="personal" hidden aria-label="Food diary and saved foods"><div id="personalBody"></div></section>
+<section id="cp" hidden aria-label="Compare foods"><div id="cpbody"></div></section>
+<section id="fc" hidden aria-label="Food Calculator">
+<div class="fcsimplehero"><button type="button" class="fcclose" id="fcClose" aria-label="Close Food Calculator and return to Food Kundali" title="Close calculator"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button><div class="fceyebrow"><span></span> FOOD KUNDALI TOOLKIT</div><h2 class="fctitle" id="fcTitle">Food Calculator</h2><p id="fcIntro">Profile, plate aur daily nutrition details—simple aur organized.</p></div>
+<div class="fcsteps" role="tablist" aria-label="Calculator sections">
+ <button type="button" class="fcstep" id="fcStepBtn1" role="tab" data-fcstep="1" aria-selected="true" aria-controls="fcProfileCard" tabindex="0"><span class="fcstepnum">1</span><span><b id="fcStep1">Profile & goals</b><small id="fcStep1Sub">Personalize targets</small></span></button>
+ <button type="button" class="fcstep" id="fcStepBtn2" role="tab" data-fcstep="2" aria-selected="false" aria-controls="fcPlatePanel" tabindex="-1"><span class="fcstepnum">2</span><span><b id="fcStep2">Plate & Details</b><small id="fcStep2Sub">Food & nutrients</small></span></button>
+</div>
+<div id="fcGlobalError" aria-live="polite"></div>
+<section class="fcb fcprofile fcpanel" id="fcProfileCard" role="tabpanel" data-fcpanel="1" aria-labelledby="fcStepBtn1">
+ <div class="fcsectionhead"><span class="fcsecicon">👤</span><div><div class="ct1" id="fcT1">Your profile & goals</div><p id="fcProfileSub">Tell us the basics. Everything stays on this device.</p></div></div>
+ <div id="fcp"></div><details id="fct" class="fccustom"></details>
+</section>
+<div class="fcpanel" id="fcPlatePanel" role="tabpanel" data-fcpanel="2" aria-labelledby="fcStepBtn2" hidden>
+<section class="fcb fcplatecard" id="fcPlateCard">
+ <div class="fcsectionhead"><span class="fcsecicon">🥗</span><div><div class="ct1" id="fcT2">Your daily plate</div><p id="fcPlateSub">Search a food, set the amount, and build your day.</p></div></div>
+ <div class="fcfoodpicker"><div class="sbox fcrow"><input id="fcs" type="text" autocomplete="off" spellcheck="false" aria-label="Search food" placeholder="🔍 Search food..." role="combobox" aria-autocomplete="list" aria-controls="fcsg" aria-expanded="false"><button type="button" class="dbtn" id="fcb" aria-haspopup="listbox" aria-expanded="false">📋 <span id="fcbl">List</span><svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button><div class="fcpn" id="fcpn" hidden><ul class="sug open" id="fcsg" role="listbox"></ul></div></div><div class="fsel" id="fcsel"></div><div hidden><select id="fcf"></select></div></div>
+ <div id="fcpl"></div>
+</section>
+<div id="fcLiveResults" aria-live="polite"></div>
+<div id="fcr" aria-live="polite"></div>
+</div>
+</section>
+
+<section id="nv" hidden aria-label="Foods by nutrient">
+<div class="fcsimplehero"><button type="button" class="fcclose" id="nxClose" aria-label="Close and return to Food Kundali" title="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button><div class="fceyebrow"><span></span> FOOD KUNDALI TOOLKIT</div><h2 class="fctitle" id="nxTitle">Foods by nutrient</h2><p id="nxIntro"></p></div>
+<div id="nxbody"></div>
+</section>
+</div>
+<nav class="bbar" id="bbar" aria-label="Main navigation">
+<button type="button" class="btab navmi" data-a="kundali"><span class="be" aria-hidden="true">🏠</span><span class="bl" data-hi="tabHome">Home</span></button>
+<button type="button" class="btab navmi" data-a="calculator"><span class="be" aria-hidden="true">🧮</span><span class="bl" data-hi="tabCalc">Calculator</span></button>
+<button type="button" class="btab navmi" data-a="diary"><span class="be" aria-hidden="true">📔</span><span class="bl" data-hi="tabDiary">Diary</span></button>
+<button type="button" class="btab navmi" data-a="saved"><span class="be" aria-hidden="true">⭐</span><span class="bl" data-hi="tabSaved">Saved</span></button>
+</nav>
+<dialog id="dlg"><h3 id="dt"></h3><div id="db"></div><div class="da" id="dab"></div></dialog>
+<script src="data.js"></script>
+<script src="core.js"></script>
+<script src="features.js"></script>
+</body>
+</html>
