@@ -1,0 +1,8 @@
+{
+  "name": "Food Kundali",
+  "description": "Apna khana, apni kundali — offline Indian food nutrition guide, daily plate calculator, food comparator, and personal food diary.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
